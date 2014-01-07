@@ -55,7 +55,7 @@ angular.module('rzModule', [])
     {
       var self = this;
       this.ccInput.on('keypress keydown', angular.bind(this, this.onKey));
-      this.ccInput.on('touchstart', function() { $(this).focus(); });
+//      this.ccInput.on('touchstart', function() { $(this).focus(); });
     },
 
     onKey: function(e)
@@ -105,12 +105,12 @@ angular.module('rzModule', [])
       else if(length == 19)
       {
         this.focusPos = 1;
-        this.ccExpMonth.triggerHandler('touchstart');
+        this.focus(this.ccExpMonth);
       }
       else if(length > 19)
       {
         this.handleCCMonth(numberStr, kc);
-        this.ccExpMonth.triggerHandler('touchstart');
+        this.focus(this.ccExpMonth);
         return;
       }
 
@@ -126,7 +126,7 @@ angular.module('rzModule', [])
 
       if(length === 0 && kc == 8)
       {
-        this.ccNumber.triggerHandler('touchstart');
+        this.focus(this.ccNumber);
       }
       else if(kc == 8)
       {
@@ -135,12 +135,12 @@ angular.module('rzModule', [])
       else if(length === 2)
       {
         this.focusPos = 2;
-        this.ccExpYear.triggerHandler('touchstart');
+        this.focus(this.ccExpYear);
       }
       else if(length > 2)
       {
         this.handleCCYear(numberStr, kc);
-        this.ccExpYear.triggerHandler('touchstart');
+        this.focus(this.ccExpYear);
         return;
       }
 
@@ -156,7 +156,7 @@ angular.module('rzModule', [])
 
       if(length === 0 && kc == 8)
       {
-        this.ccExpMonth.triggerHandler('touchstart');
+        this.focus(this.ccExpMonth);
       }
       else if(kc == 8)
       {
@@ -165,12 +165,12 @@ angular.module('rzModule', [])
       else if(length === 2)
       {
         this.focusPos = 3;
-        this.ccCcv.triggerHandler('touchstart');
+        this.focus(this.ccCcv);
       }
       else if(length > 2)
       {
         this.handleCCV(numberStr, kc);
-        this.ccCcv.triggerHandler('touchstart');
+        this.focus(this.ccCcv);
         return;
       }
 
@@ -186,7 +186,7 @@ angular.module('rzModule', [])
 
       if(length === 0 && kc == 8)
       {
-        this.ccExpYear.triggerHandler('touchstart');
+        this.focus(this.ccExpYear);
       }
       else if(kc == 8)
       {
@@ -216,6 +216,12 @@ angular.module('rzModule', [])
       {
         return '';
       }
+    },
+
+    focus: function(elem)
+    {
+      elem[0].focus();
+      elem.triggerHandler('touchstart');
     },
 
     getCardType: function(number)
