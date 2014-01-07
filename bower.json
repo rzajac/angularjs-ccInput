@@ -1,0 +1,25 @@
+{
+  "name": "angularjs-credit-card-input",
+  "version": "0.0.1",
+  "homepage": "https://github.com/rzajac/angularjs-credit-card-input",
+  "authors": [
+    "Rafal Zajac <rzajac@gmail.com>"
+  ],
+  "description": "AngularJS credit card input. Mobile friendly!",
+  "main": "ccinput.js",
+  "keywords": [
+    "angularjs",
+    "credit card"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "angular": "~1.2.5"
+  }
+}

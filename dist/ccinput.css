@@ -1,0 +1,86 @@
+ccinput input::-webkit-outer-spin-button,
+ccinput input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+ccinput span {
+    height: 32px;
+}
+
+ccinput .ccExpMonth,
+ccinput .ccExpYear{
+    width: 10%;
+}
+
+ccinput .ccCcv {
+    width: 10%;
+}
+
+ccinput .ccNumber {
+    width: 50%;
+}
+
+ccinput {
+    background-color: white;
+    height: 34px;
+    display: inline-block;
+    padding: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+ccinput input {
+    outline: none;
+    border: 1px solid black;
+    height: 32px;
+    margin: 0 0 0 0;
+    display: inline-block;
+    line-height: 32px;
+    float: left;
+    font-weight: bold;
+    font-size: 1em;
+    color: #0386c3;
+}
+
+ccinput .ccLogo {
+    display: inline-block;
+    width: 51px;
+    margin: 1px 10px 0 2px;
+    float: left;
+}
+
+.ds-32px, .vi-32px, .ae-32px, .mc-32px, .na-32px{
+    background: url(../dist/cc_logo.png) no-repeat;
+}
+
+.ds-32px{
+    background-position: 0 -70px ;
+    width: 51px;
+    height: 32px;
+}
+
+.vi-32px{
+    background-position: 0 0;
+    width: 51px;
+    height: 32px;
+}
+
+.ae-32px{
+    background-position: 0 -105px ;
+    width: 51px;
+    height: 32px;
+}
+
+.mc-32px{
+    background-position: 0 -35px ;
+    width: 51px;
+    height: 32px;
+}
+
+.na-32px{
+    background-position: 0 -140px ;
+    width: 52px;
+    height: 32px;
+}
+

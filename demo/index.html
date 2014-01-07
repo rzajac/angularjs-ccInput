@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html ng-app="plunker">
+
+<head>
+    <meta charset="utf-8" />
+    <title>AngularJS Credit Card Input</title>
+    <link rel="stylesheet" href="../dist/ccinput.css" />
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../ccinput.js"></script>
+</head>
+
+<body ng-controller="MainCtrl">
+
+<div style="background-color: #808080;margin-left: 40px;margin-right: 50px; padding: 30px;">
+    <pre>{{ creditCard | json }}</pre>
+
+    <ccinput
+        rz-card-number="creditCard.number"
+        rz-card-exp-month="creditCard.expMonth"
+        rz-card-exp-year="creditCard.expYear"
+        rz-card-ccv="creditCard.ccv"></ccinput>
+
+    <br/>
+
+</div>
+</body>
+
+<script>
+    var app = angular.module('plunker', ['rzModule']);
+
+    app.controller('MainCtrl', function($scope)
+    {
+        $scope.creditCard = {
+            number: "",
+            expYear: "",
+            expMonth: "",
+            ccv: ""
+        };
+    });
+</script>
+
+</html>
